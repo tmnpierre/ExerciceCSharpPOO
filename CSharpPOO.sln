@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo001", "Demo001\Demo001.csproj", "{D0D7C4B7-81CE-400A-881D-060441CFEA93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo001", "Demo001\Demo001.csproj", "{D0D7C4B7-81CE-400A-881D-060441CFEA93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{397F95BD-061F-4195-8647-CD7FC42C3AAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercices", "Exercices", "{0CF66F6B-C64B-4BE8-A851-3582B8737C2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +22,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0D7C4B7-81CE-400A-881D-060441CFEA93} = {397F95BD-061F-4195-8647-CD7FC42C3AAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31060136-BC2E-4FED-BDC6-AF8A515C8D0F}
