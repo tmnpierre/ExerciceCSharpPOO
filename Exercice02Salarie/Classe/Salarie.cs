@@ -1,4 +1,4 @@
-﻿namespace Exercice02Salarie
+﻿namespace Exercice02Salarie.Classe
 {
     internal class Salarie
     {
