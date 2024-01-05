@@ -2,24 +2,20 @@
 {
     internal class Chaise
     {
-        private int _nbDePied;
-        private string _materiaux;
-        private string _couleur;
-
-        public int NbDePied { get => _nbDePied; set => _nbDePied = value; }
-        public string Materiaux { get => _materiaux; set => _materiaux = value; }
-        public string Couleur { get => _couleur; set => _couleur = value; }
+        public int NbDePied { get; set; }
+        public string Materiaux { get; set; }
+        public string Couleur { get; set; }
 
         public Chaise(int nbDePied, string materiaux, string couleur)
         {
-            _nbDePied = nbDePied;
-            _materiaux = materiaux;
-            _couleur = couleur;
+            NbDePied = nbDePied;
+            Materiaux = materiaux;
+            Couleur = couleur;
         }
 
         public override string ToString()
         {
-            return $"La chaise a {_nbDePied} pieds, est de couleur {_couleur} et est en {_materiaux}.";
+            return $"La chaise a {NbDePied} pieds, est de couleur {Couleur} et est en {Materiaux}.";
         }
     }
 }
