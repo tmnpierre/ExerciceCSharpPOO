@@ -1,4 +1,4 @@
-﻿using Exercice02Salarie;
+﻿using Exercice02Salarie.Classe;
 internal class Program
 {
     private static void Main(string[] args)
