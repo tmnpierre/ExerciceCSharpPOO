@@ -1,5 +1,14 @@
 ﻿using Exercice05SalarieHeritage.Classes;
 
+Console.WriteLine("--- Gestion des employés --- \n");
+Console.WriteLine("1 -- Ajouter un employé");
+Console.WriteLine("2 -- Afficher le salaire des employés");
+Console.WriteLine("3 -- Rechercher un employé");
+Console.WriteLine("0 -- Quitter \n");
+Console.Write("Entrer votre choix : ");
+var choose = Console.ReadLine();
+
+
 Salarie jeanMichel = new Commercial("004", "Jean-Michel", "Commercial", "Cadre", 1300, 13000, 3);
 
 List<Salarie> salaries = new() {
