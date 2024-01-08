@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo02Static", "Demo02Stati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice02Salarie", "Exercice02Salarie\Exercice02Salarie.csproj", "{A5DA9CC2-96FC-495F-8D9D-2070B3B43F09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice03Citerne", "Exercice03Citerne\Exercice03Citerne.csproj", "{6AFB1F17-2F11-4633-959A-BABE219FDF35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice03Citerne", "Exercice03Citerne\Exercice03Citerne.csproj", "{6AFB1F17-2F11-4633-959A-BABE219FDF35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice05SalarieHeritage", "Exercice05SalarieHeritage\Exercice05SalarieHeritage.csproj", "{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{6AFB1F17-2F11-4633-959A-BABE219FDF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AFB1F17-2F11-4633-959A-BABE219FDF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AFB1F17-2F11-4633-959A-BABE219FDF35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{5025B91E-927D-4995-B234-9A5CBE5A8996} = {397F95BD-061F-4195-8647-CD7FC42C3AAB}
 		{A5DA9CC2-96FC-495F-8D9D-2070B3B43F09} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 		{6AFB1F17-2F11-4633-959A-BABE219FDF35} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
+		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31060136-BC2E-4FED-BDC6-AF8A515C8D0F}
