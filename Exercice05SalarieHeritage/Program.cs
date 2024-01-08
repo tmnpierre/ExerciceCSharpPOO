@@ -23,7 +23,7 @@ while (continuer)
             bool continuer2 = true;
             while (continuer2)
             {
-                Console.WriteLine("1 -- Salarié");
+                Console.WriteLine("1 -- Employé");
                 Console.WriteLine("2 -- Commercial");
                 Console.WriteLine("3 -- Retour \n");
                 Console.Write("Entrez votre choix : ");
@@ -32,7 +32,7 @@ while (continuer)
                 switch (choose2)
                 {
                     case "1":
-                        // Logic for adding a Salarié
+                        // Logic for adding a Employé
                         break;
                     case "2":
                         // Logic for adding a Commercial
