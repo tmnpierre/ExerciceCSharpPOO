@@ -1,89 +1,164 @@
 ﻿using Exercice05SalarieHeritage.Classes;
 
-Console.WriteLine("--- Gestion des employés --- \n");
-
-bool continuer = true;
-
-while (continuer)
+class Program
 {
-    Console.Clear();
-    Console.WriteLine("1 -- Ajouter un employé");
-    Console.WriteLine("2 -- Afficher le salaire des employés");
-    Console.WriteLine("3 -- Rechercher un employé");
-    Console.WriteLine("0 -- Quitter \n");
-    Console.Write("Entrez votre choix : ");
-    var choose = Console.ReadLine();
-
-    switch (choose)
+    static void Main(string[] args)
     {
-        case "1":
+        Console.WriteLine("--- Gestion des employés --- \n");
+
+        bool continuer = true;
+        List<Salarie> salaries = new List<Salarie>();
+
+        while (continuer)
+        {
             Console.Clear();
-            Console.WriteLine("--- Ajouter un employé --- \n");
+            Console.WriteLine("1 -- Ajouter un employé");
+            Console.WriteLine("2 -- Afficher le salaire des employés");
+            Console.WriteLine("3 -- Rechercher un employé");
+            Console.WriteLine("0 -- Quitter \n");
+            Console.Write("Entrez votre choix : ");
+            var choose = Console.ReadLine();
 
-            bool continuer2 = true;
-            while (continuer2)
+            switch (choose)
             {
-                Console.WriteLine("1 -- Employé");
-                Console.WriteLine("2 -- Commercial");
-                Console.WriteLine("3 -- Retour \n");
-                Console.Write("Entrez votre choix : ");
-                var choose2 = Console.ReadLine();
-
-                switch (choose2)
-                {
-                    case "1":
-                        // Logic for adding a Employé
-                        break;
-                    case "2":
-                        // Logic for adding a Commercial
-                        break;
-                    case "3":
-                        continuer2 = false;
-                        Console.Clear();
-                        break;
-                }
+                case "1":
+                    AjouterEmploye(salaries);
+                    break;
+                case "2":
+                    AfficherSalaires(salaries);
+                    break;
+                case "3":
+                    RechercherEmploye(salaries);
+                    break;
+                case "0":
+                    continuer = false;
+                    break;
             }
-            break;
-        case "2":
-            // Display employee salaries
-            break;
-        case "3":
-            // Search for an employee
-            break;
-        case "0":
-            continuer = false;
-            break;
+        }
+    }
+
+    static void AjouterEmploye(List<Salarie> salaries)
+    {
+        Console.Clear();
+        Console.WriteLine("--- Ajouter un employé --- \n");
+
+        Console.WriteLine("1 -- Employé");
+        Console.WriteLine("2 -- Commercial");
+        Console.Write("Entrez votre choix : ");
+        var choose2 = Console.ReadLine();
+
+        switch (choose2)
+        {
+            case "1":
+                salaries.Add(CreerEmploye());
+                break;
+            case "2":
+                salaries.Add(CreerCommercial());
+                break;
+        }
+    }
+
+    static Salarie CreerEmploye()
+    {
+        Console.Clear();
+        Console.WriteLine("Création d'un nouvel employé.");
+        Console.Write("Entrez le matricule : ");
+        string matricule = Console.ReadLine();
+
+        Console.Write("Entrez le nom : ");
+        string nom = Console.ReadLine();
+
+        Console.Write("Entrez le service : ");
+        string service = Console.ReadLine();
+
+        Console.Write("Entrez la catégorie : ");
+        string categorie = Console.ReadLine();
+
+        Console.Write("Entrez le salaire : ");
+        decimal salaire;
+        while (!decimal.TryParse(Console.ReadLine(), out salaire))
+        {
+            Console.Write("Veuillez entrer un nombre valide pour le salaire : ");
+        }
+
+        return new Employe(matricule, nom, service, categorie, salaire);
+    }
+
+    static Salarie CreerCommercial()
+    {
+        Console.Clear();
+        Console.WriteLine("Création d'un nouveau commercial.");
+        Console.Write("Entrez le matricule : ");
+        string matricule = Console.ReadLine();
+
+        Console.Write("Entrez le nom : ");
+        string nom = Console.ReadLine();
+
+        Console.Write("Entrez le service : ");
+        string service = Console.ReadLine();
+
+        Console.Write("Entrez la catégorie : ");
+        string categorie = Console.ReadLine();
+
+        Console.Write("Entrez le salaire : ");
+        decimal salaire;
+        while (!decimal.TryParse(Console.ReadLine(), out salaire))
+        {
+            Console.Write("Veuillez entrer un nombre valide pour le salaire : ");
+        }
+
+        Console.Write("Entrez le chiffre d'affaire : ");
+        decimal chiffreAffaire;
+        while (!decimal.TryParse(Console.ReadLine(), out chiffreAffaire))
+        {
+            Console.Write("Veuillez entrer un nombre valide pour le chiffre d'affaire : ");
+        }
+
+        Console.Write("Entrez le pourcentage de commission : ");
+        decimal commissionPrct;
+        while (!decimal.TryParse(Console.ReadLine(), out commissionPrct))
+        {
+            Console.Write("Veuillez entrer un nombre valide pour le pourcentage de commission : ");
+        }
+
+        return new Commercial(matricule, nom, service, categorie, salaire, chiffreAffaire, commissionPrct);
+    }
+
+    static void AfficherSalaires(List<Salarie> salaries)
+    {
+        Console.Clear();
+        foreach (var salarie in salaries)
+        {
+            salarie.AfficherSalaire();
+        }
+        Console.WriteLine("\nAppuyez sur une touche pour continuer...");
+        Console.ReadKey();
+    }
+
+    static void RechercherEmploye(List<Salarie> salaries)
+    {
+        Console.Clear();
+        Console.Write("Entrez le début du nom de l'employé : ");
+        string recherche = Console.ReadLine().ToLower();
+
+        bool employeTrouve = false;
+
+        foreach (var salarie in salaries)
+        {
+            if (salarie.Nom.ToLower().StartsWith(recherche))
+            {
+                string typeEmploye = salarie is Commercial ? "Commercial" : "Employé";
+                Console.WriteLine($"Employé trouvé : {salarie.Nom}, Service : {salarie.Service}, Type : {typeEmploye}");
+                employeTrouve = true;
+            }
+        }
+
+        if (!employeTrouve)
+        {
+            Console.WriteLine("Aucun employé trouvé avec ce nom.");
+        }
+
+        Console.WriteLine("\nAppuyez sur une touche pour continuer...");
+        Console.ReadKey();
     }
 }
-
-Salarie jeanMichel = new Commercial("004", "Jean-Michel", "Commercial", "Cadre", 1300, 13000, 3);
-
-List<Salarie> salaries = new() {
-jeanMichel,
-new Salarie("001", "Chloé", "Comptabilité", "Cadre", 24000),
-new Salarie("002", "Emma", "Comptabilité", "Employée", 30000),
-new Salarie("003", "Georges", "Developpement", "Employé", 26000),
-new Salarie(),
-};
-
-foreach (Salarie salarie in salaries)
-{
-    salarie.AfficherSalaire();
-}
-
-
-
-Console.WriteLine("Nombre de salariés : " + Salarie.NombreSalaries);
-
-Console.WriteLine("On change le salaire de Chloé à 500000.");
-salaries[0].Salaire = 500000;
-
-Console.WriteLine("Nombre de salariés : " + Salarie.NombreSalaries);
-Console.WriteLine("Salaire total : " + Salarie.TotalSalaires);
-
-Console.WriteLine("Remise à zéro des salariés et salaire total.");
-Salarie.RemiseAZero();
-
-Console.WriteLine("Nombre de salariés : " + Salarie.NombreSalaries);
-Console.WriteLine("Salaire total : " + Salarie.TotalSalaires);
-

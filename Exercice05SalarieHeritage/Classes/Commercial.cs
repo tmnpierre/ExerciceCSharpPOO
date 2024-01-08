@@ -3,21 +3,27 @@
     internal class Commercial : Salarie
     {
         private decimal _chiffreAffaire;
-        private decimal _commisionPrct;
+        private decimal _commissionPrct;
 
-        public decimal ChiffreAffaire { get; }
-        public decimal CommisionPrct { get; }
+        public decimal ChiffreAffaire { get => _chiffreAffaire; set => _chiffreAffaire = value; }
+        public decimal CommissionPrct { get => _commissionPrct; set => _commissionPrct = value; }
 
-        public Commercial(string matricule, string nom, string service, string categorie, decimal salaire, decimal chiffreAffaire, decimal commisionPrct) : base(matricule, nom, service, categorie, salaire)
+        public Commercial(string matricule, string nom, string service, string categorie, decimal salaire, decimal chiffreAffaire, decimal commissionPrct)
+            : base(matricule, nom, service, categorie, salaire)
         {
-            ChiffreAffaire = chiffreAffaire;
-            CommisionPrct = commisionPrct;
+            _chiffreAffaire = chiffreAffaire;
+            _commissionPrct = commissionPrct;
         }
 
         public override void AfficherSalaire()
         {
-            var comision = _chiffreAffaire * (_chiffreAffaire / 100);
-            Console.WriteLine($"Le salaire de {Nom} avec commision est de {comision + Salaire}");
+            var commission = _chiffreAffaire * (_commissionPrct / 100);
+            Console.WriteLine($"Le salaire de {Nom} avec commission est de {commission + Salaire}");
+        }
+
+        public override string ToString()
+        {
+            return $"Commercial: Matricule: {Matricule}, Nom: {Nom}, Service: {Service}, Catégorie: {Categorie}, Salaire: {Salaire}, Chiffre d'Affaire: {_chiffreAffaire}, Commission: {_commissionPrct}%";
         }
     }
 }
