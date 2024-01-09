@@ -8,8 +8,19 @@ namespace Exercice06CompteBancaire.Classes
 {
     internal abstract class CompteBancaire
     {
-        public double Solde { get; protected set; }
+        public decimal Solde { get; protected set; }
         public string Client { get; private set; }
         public List<string> ListeOperations { get; private set; }
+
+        protected CompteBancaire(string client, decimal soldeInitial)
+        {
+            Client = client;
+            Solde = soldeInitial;
+            ListeOperations = new List<string>();
+        }
+
+        public abstract void Depot(decimal montant);
+
+        public abstract void Retrait(decimal montant);
     }
 }
