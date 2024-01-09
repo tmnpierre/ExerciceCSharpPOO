@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercice06CompteBancaire.Classes
 {
-    internal class CompteBancaire
+    internal abstract class CompteBancaire
     {
     }
 }
