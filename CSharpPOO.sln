@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice02Salarie", "Exerci
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice03Citerne", "Exercice03Citerne\Exercice03Citerne.csproj", "{6AFB1F17-2F11-4633-959A-BABE219FDF35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice05SalarieHeritage", "Exercice05SalarieHeritage\Exercice05SalarieHeritage.csproj", "{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice05SalarieHeritage", "Exercice05SalarieHeritage\Exercice05SalarieHeritage.csproj", "{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice04Pendu", "Exercice04Pendu\Exercice04Pendu.csproj", "{A48F4F12-A48F-48A9-9524-F8A98B9361FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48F4F12-A48F-48A9-9524-F8A98B9361FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48F4F12-A48F-48A9-9524-F8A98B9361FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48F4F12-A48F-48A9-9524-F8A98B9361FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48F4F12-A48F-48A9-9524-F8A98B9361FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{A5DA9CC2-96FC-495F-8D9D-2070B3B43F09} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 		{6AFB1F17-2F11-4633-959A-BABE219FDF35} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
+		{A48F4F12-A48F-48A9-9524-F8A98B9361FA} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31060136-BC2E-4FED-BDC6-AF8A515C8D0F}
