@@ -8,7 +8,7 @@ namespace Exercice06CompteBancaire.Classes
 {
     internal class CompteEpargne : CompteBancaire
     {
-        public CompteEpargne(string client, decimal soldeInitial) : base(client, soldeInitial)
+        public CompteEpargne(Client client, decimal soldeInitial) : base(client, soldeInitial)
         {
         }
 

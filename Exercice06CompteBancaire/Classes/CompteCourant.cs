@@ -8,12 +8,12 @@
 
         public override void Depot(decimal montant)
         {
-            // Implémentation de la méthode Depot
+            throw new NotImplementedException();
         }
 
         public override void Retrait(decimal montant)
         {
-            // Implémentation de la méthode Retrait
+            throw new NotImplementedException();
         }
     }
 }
