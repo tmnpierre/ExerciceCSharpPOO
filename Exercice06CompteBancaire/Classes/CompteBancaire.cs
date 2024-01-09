@@ -4,13 +4,13 @@
     {
         public decimal Solde { get; protected set; }
         public Client Client { get; private set; }
-        public List<string> ListeOperations { get; private set; }
+        public List<Operation> ListeOperations { get; private set; }
 
         protected CompteBancaire(Client client, decimal soldeInitial)
         {
             Client = client;
             Solde = soldeInitial;
-            ListeOperations = new List<string>();
+            ListeOperations = new List<Operation>();
         }
 
         public abstract void Depot(decimal montant);

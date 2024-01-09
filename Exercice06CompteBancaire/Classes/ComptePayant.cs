@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercice06CompteBancaire.Classes
+﻿namespace Exercice06CompteBancaire.Classes
 {
     internal class ComptePayant : CompteBancaire
     {
@@ -14,12 +8,16 @@ namespace Exercice06CompteBancaire.Classes
 
         public override void Depot(decimal montant)
         {
-            throw new NotImplementedException();
+            Solde += montant;
+            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot);
+            ListeOperations.Add(operation);
         }
 
         public override void Retrait(decimal montant)
         {
-            throw new NotImplementedException();
+            Solde -= montant;
+            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait);
+            ListeOperations.Add(operation);
         }
     }
 }
