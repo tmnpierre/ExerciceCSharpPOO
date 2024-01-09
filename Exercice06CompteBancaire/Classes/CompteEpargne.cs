@@ -2,7 +2,7 @@
 {
     internal class CompteEpargne : CompteBancaire
     {
-        public decimal interet = 1.05m;
+        public decimal interet = 1.10m;
         public CompteEpargne(Client client, decimal soldeInitial) : base(client, soldeInitial)
         {
         }
