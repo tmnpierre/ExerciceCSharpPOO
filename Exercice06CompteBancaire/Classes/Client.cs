@@ -12,5 +12,13 @@ namespace Exercice06CompteBancaire.Classes
         public string Nom { get; set; }
         public string Identifiant { get; set; }
         public List<string> ListeCompte { get; private set; }
+
+        public Client(string prenom, string nom, string identifiant, List<string> listeCompte)
+        {
+            Prenom = prenom;
+            Nom = nom;
+            Identifiant = identifiant;
+            ListeCompte = listeCompte;
+        }
     }
 }
