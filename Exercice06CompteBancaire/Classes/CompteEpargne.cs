@@ -2,13 +2,14 @@
 {
     internal class CompteEpargne : CompteBancaire
     {
+        public decimal interet = 1.05m;
         public CompteEpargne(Client client, decimal soldeInitial) : base(client, soldeInitial)
         {
         }
 
         public override void Depot(decimal montant)
         {
-            Solde += montant;
+            Solde += montant * interet;
             var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot);
             ListeOperations.Add(operation);
         }
