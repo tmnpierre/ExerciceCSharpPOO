@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercice06CompteBancaire.Classes
+﻿namespace Exercice06CompteBancaire.Classes
 {
     internal class CompteCourant : CompteBancaire
     {
-        public CompteCourant(string client, decimal soldeInitial) : base(client, soldeInitial)
+        public CompteCourant(Client client, decimal soldeInitial) : base(client, soldeInitial)
         {
         }
 
         public override void Depot(decimal montant)
         {
-            throw new NotImplementedException();
+            // Implémentation de la méthode Depot
         }
 
         public override void Retrait(decimal montant)
         {
-            throw new NotImplementedException();
+            // Implémentation de la méthode Retrait
         }
     }
 }

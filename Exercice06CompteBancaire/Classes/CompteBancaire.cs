@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercice06CompteBancaire.Classes
+﻿namespace Exercice06CompteBancaire.Classes
 {
     internal abstract class CompteBancaire
     {
         public decimal Solde { get; protected set; }
-        public string Client { get; private set; }
+        public Client Client { get; private set; }
         public List<string> ListeOperations { get; private set; }
 
-        protected CompteBancaire(string client, decimal soldeInitial)
+        protected CompteBancaire(Client client, decimal soldeInitial)
         {
             Client = client;
             Solde = soldeInitial;
@@ -20,7 +14,6 @@ namespace Exercice06CompteBancaire.Classes
         }
 
         public abstract void Depot(decimal montant);
-
         public abstract void Retrait(decimal montant);
     }
 }
