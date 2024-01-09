@@ -6,10 +6,10 @@
         public Client Client { get; private set; }
         public List<Operation> ListeOperations { get; private set; }
 
-        protected CompteBancaire(Client client, decimal soldeInitial)
+        protected CompteBancaire(Client client, decimal solde)
         {
             Client = client;
-            Solde = soldeInitial;
+            Solde = solde;
             ListeOperations = new List<Operation>();
         }
 

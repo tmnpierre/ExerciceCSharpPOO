@@ -4,7 +4,7 @@
     {
         public decimal coutDepot = 0.95m;
         public decimal coutRetrait = 1.05m; 
-        public ComptePayant(Client client, decimal soldeInitial) : base(client, soldeInitial)
+        public ComptePayant(Client client, decimal solde) : base(client, solde)
         {
         }
 

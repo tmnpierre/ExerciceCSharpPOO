@@ -2,7 +2,7 @@
 {
     internal class CompteCourant : CompteBancaire
     {
-        public CompteCourant(Client client, decimal soldeInitial) : base(client, soldeInitial)
+        public CompteCourant(Client client, decimal solde) : base(client, solde)
         {
         }
 
