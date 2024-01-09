@@ -2,22 +2,25 @@
 {
     internal class CompteCourant : CompteBancaire
     {
-        public CompteCourant(Client client, decimal solde) : base(client, solde)
-        {
-        }
+        public CompteCourant(Client client, decimal solde) : base(client, solde) { }
 
         public override void Depot(decimal montant)
         {
             Solde += montant;
-            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot);
-            ListeOperations.Add(operation);
+            ListeOperations.Add(new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot));
         }
 
         public override void Retrait(decimal montant)
         {
-            Solde -= montant;
-            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait);
-            ListeOperations.Add(operation);
+            if (Solde >= montant)
+            {
+                Solde -= montant;
+                ListeOperations.Add(new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait));
+            }
+            else
+            {
+                throw new InvalidOperationException("Fonds insuffisants pour ce retrait.");
+            }
         }
     }
 }

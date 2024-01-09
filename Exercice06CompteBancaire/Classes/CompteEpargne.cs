@@ -2,23 +2,35 @@
 {
     internal class CompteEpargne : CompteBancaire
     {
-        public decimal interet = 1.10m;
-        public CompteEpargne(Client client, decimal solde) : base(client, solde)
+        private decimal tauxInteret;
+
+        public CompteEpargne(Client client, decimal solde, decimal tauxInteret = 0.02m) : base(client, solde)
         {
+            this.tauxInteret = tauxInteret;
         }
 
         public override void Depot(decimal montant)
         {
-            Solde += montant * interet;
-            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot);
-            ListeOperations.Add(operation);
+            Solde += montant;
+            ListeOperations.Add(new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot));
         }
 
         public override void Retrait(decimal montant)
         {
-            Solde -= montant;
-            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait);
-            ListeOperations.Add(operation);
+            if (Solde >= montant)
+            {
+                Solde -= montant;
+                ListeOperations.Add(new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait));
+            }
+            else
+            {
+                throw new InvalidOperationException("Fonds insuffisants pour ce retrait.");
+            }
+        }
+
+        public void AppliquerInteret()
+        {
+            Solde += Solde * tauxInteret;
         }
     }
 }

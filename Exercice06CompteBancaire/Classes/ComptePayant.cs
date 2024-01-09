@@ -2,24 +2,38 @@
 {
     internal class ComptePayant : CompteBancaire
     {
-        public decimal coutDepot = 0.95m;
-        public decimal coutRetrait = 1.05m; 
-        public ComptePayant(Client client, decimal solde) : base(client, solde)
+        private decimal fraisOperation;
+
+        public ComptePayant(Client client, decimal solde, decimal fraisOperation = 1.00m) : base(client, solde)
         {
+            this.fraisOperation = fraisOperation;
         }
 
         public override void Depot(decimal montant)
         {
-            Solde += montant * coutDepot;
-            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot);
-            ListeOperations.Add(operation);
+            if (montant > fraisOperation)
+            {
+                Solde += montant - fraisOperation;
+                ListeOperations.Add(new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Depot));
+            }
+            else
+            {
+                throw new InvalidOperationException("Le montant doit être supérieur aux frais d'opération.");
+            }
         }
 
         public override void Retrait(decimal montant)
         {
-            Solde -= montant * coutRetrait;
-            var operation = new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait);
-            ListeOperations.Add(operation);
+            decimal montantAvecFrais = montant + fraisOperation;
+            if (Solde >= montantAvecFrais)
+            {
+                Solde -= montantAvecFrais;
+                ListeOperations.Add(new Operation(ListeOperations.Count + 1, montant, Operation.TypeOperation.Retrait));
+            }
+            else
+            {
+                throw new InvalidOperationException("Fonds insuffisants pour ce retrait.");
+            }
         }
     }
 }
