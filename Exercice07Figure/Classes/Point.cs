@@ -1,19 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercice07Figure.Classes
 {
     internal class Point
     {
-        public double PosX { get; set; } = 2;
-        public double PosY { get; set; } = 4;
+        public double PosX { get; set; }
+        public double PosY { get; set; }
+
+        public Point(double posX = 0, double posY = 0)
+        {
+            PosX = posX;
+            PosY = posY;
+        }
 
         public override string ToString()
         {
-            return $"La position initial est {PosX};{PosY}";
+            return $"({PosX};{PosY})";
         }
     }
 }

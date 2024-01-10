@@ -1,30 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Exercice07Figure.Interfaces;
 
 namespace Exercice07Figure.Classes
 {
     internal class Carre : Figure
     {
-        public double Cote {  get; set; }
+        public double Cote { get; set; }
 
-        public override void Deplacement(double dx, double dy)
+        public Carre(double cote, double x = 0, double y = 0) : base(x, y)
         {
-            base.Deplacement(dx, dy);
+            Cote = cote;
         }
 
         public override string ToString()
         {
-            return $"Coordonnée du Carré ABCD (Coté = 2) :\n" +
-                $"Point A : {origine.PosX};{origine.PosY}\n" +
-                $"Point B : {origine.PosX + 2};{origine.PosY}\n" +
-                $"Point C : {origine.PosX + 2};{origine.PosY - 2}\n" +
-                $"Point D : {origine.PosX};{origine.PosY - 2}\n" +
-                $"___________________";
+            return $"Coordonnées du carré (Côté = {Cote}) :\n" +
+                   $"A {Origine}\n" +
+                   $"B {new Point(Origine.PosX + Cote, Origine.PosY)}\n" +
+                   $"C {new Point(Origine.PosX + Cote, Origine.PosY - Cote)}\n" +
+                   $"D {new Point(Origine.PosX, Origine.PosY - Cote)}";
         }
-
     }
 }
