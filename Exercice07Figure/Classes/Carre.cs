@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exercice07Figure.Classes
 {
-    internal class Carre
+    internal class Carre : Figure
     {
+        public double Cote {  get; set; }
     }
 }
