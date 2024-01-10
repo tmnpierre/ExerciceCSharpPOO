@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice03Citerne", "Exerci
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice05SalarieHeritage", "Exercice05SalarieHeritage\Exercice05SalarieHeritage.csproj", "{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice04Pendu", "Exercice04Pendu\Exercice04Pendu.csproj", "{A48F4F12-A48F-48A9-9524-F8A98B9361FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice04Pendu", "Exercice04Pendu\Exercice04Pendu.csproj", "{A48F4F12-A48F-48A9-9524-F8A98B9361FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice06CompteBancaire", "Exercice06CompteBancaire\Exercice06CompteBancaire.csproj", "{61B6AD22-9EBB-4005-850F-70DA90DA6842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice06CompteBancaire", "Exercice06CompteBancaire\Exercice06CompteBancaire.csproj", "{61B6AD22-9EBB-4005-850F-70DA90DA6842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice07Figure", "Exercice07Figure\Exercice07Figure.csproj", "{F8D1E4D1-836E-4304-9E5D-6A4CEB7C5BA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{61B6AD22-9EBB-4005-850F-70DA90DA6842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61B6AD22-9EBB-4005-850F-70DA90DA6842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61B6AD22-9EBB-4005-850F-70DA90DA6842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D1E4D1-836E-4304-9E5D-6A4CEB7C5BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D1E4D1-836E-4304-9E5D-6A4CEB7C5BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D1E4D1-836E-4304-9E5D-6A4CEB7C5BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D1E4D1-836E-4304-9E5D-6A4CEB7C5BA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{507A7BDE-23B1-4AD4-830F-EE6CC457C1CC} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 		{A48F4F12-A48F-48A9-9524-F8A98B9361FA} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 		{61B6AD22-9EBB-4005-850F-70DA90DA6842} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
+		{F8D1E4D1-836E-4304-9E5D-6A4CEB7C5BA3} = {0CF66F6B-C64B-4BE8-A851-3582B8737C2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31060136-BC2E-4FED-BDC6-AF8A515C8D0F}

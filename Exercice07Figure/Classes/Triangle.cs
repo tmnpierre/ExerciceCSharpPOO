@@ -15,5 +15,10 @@ namespace Exercice07Figure.Classes
         {
             return base.ToString();
         }
+
+        public override void Deplacement(double dx, double dy)
+        {
+            base.Deplacement(dx, dy);
+        }
     }
 }
