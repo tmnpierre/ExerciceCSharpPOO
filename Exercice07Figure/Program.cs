@@ -14,13 +14,12 @@ namespace Exercice07Figure
             {
                 Console.Clear();
                 Console.WriteLine("Gestion des Figures Géométriques");
-                Console.WriteLine("1) Créer un nouveau Point");
-                Console.WriteLine("2) Créer un nouveau Carré");
-                Console.WriteLine("3) Créer un nouveau Rectangle");
-                Console.WriteLine("4) Créer un nouveau Triangle");
-                Console.WriteLine("5) Déplacer une Figure");
-                Console.WriteLine("6) Afficher la Figure");
-                Console.WriteLine("7) Quitter");
+                Console.WriteLine("1) Créer un nouveau Carré");
+                Console.WriteLine("2) Créer un nouveau Rectangle");
+                Console.WriteLine("3) Créer un nouveau Triangle");
+                Console.WriteLine("4) Déplacer une Figure");
+                Console.WriteLine("5) Afficher la Figure");
+                Console.WriteLine("6) Quitter");
                 Console.Write("\nSélectionnez une option : ");
 
                 string choix = Console.ReadLine();
@@ -28,18 +27,15 @@ namespace Exercice07Figure
                 switch (choix)
                 {
                     case "1":
-                        figureSelectionnee = CreerPoint();
-                        break;
-                    case "2":
                         figureSelectionnee = CreerCarre();
                         break;
-                    case "3":
+                    case "2":
                         figureSelectionnee = CreerRectangle();
                         break;
-                    case "4":
+                    case "3":
                         figureSelectionnee = CreerTriangle();
                         break;
-                    case "5":
+                    case "4":
                         if (figureSelectionnee != null)
                         {
                             DeplacerFigure(figureSelectionnee);
@@ -49,7 +45,7 @@ namespace Exercice07Figure
                             Console.WriteLine("Aucune figure sélectionnée pour le déplacement.");
                         }
                         break;
-                    case "6":
+                    case "5":
                         if (figureSelectionnee != null)
                         {
                             Console.WriteLine(figureSelectionnee);
@@ -59,7 +55,7 @@ namespace Exercice07Figure
                             Console.WriteLine("Aucune figure sélectionnée pour l'affichage.");
                         }
                         break;
-                    case "7":
+                    case "6":
                         continuer = false;
                         break;
                     default:
@@ -74,7 +70,49 @@ namespace Exercice07Figure
                 }
             }
         }
+        static Carre CreerCarre()
+        {
+            Console.Write("Entrez la longueur du côté du carré : ");
+            double cote = Convert.ToDouble(Console.ReadLine());
 
+            Carre carre = new Carre(cote);
+            Console.WriteLine("Carré créé avec succès !");
+            return carre;
+        }
 
+        static Rectangle CreerRectangle()
+        {
+            Console.Write("Entrez la longueur du rectangle : ");
+            double longueur = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Entrez la largeur du rectangle : ");
+            double largeur = Convert.ToDouble(Console.ReadLine());
+
+            Rectangle rectangle = new Rectangle(longueur, largeur);
+            Console.WriteLine("Rectangle créé avec succès !");
+            return rectangle;
+        }
+
+        static Triangle CreerTriangle()
+        {
+            Console.Write("Entrez la base du triangle : ");
+            double baseTriangle = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Entrez la hauteur du triangle : ");
+            double hauteur = Convert.ToDouble(Console.ReadLine());
+
+            Triangle triangle = new Triangle(baseTriangle, hauteur);
+            Console.WriteLine("Triangle créé avec succès !");
+            return triangle;
+        }
+
+        static void DeplacerFigure(Figure figure)
+        {
+            Console.Write("Entrez le déplacement sur l'axe X : ");
+            double dx = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Entrez le déplacement sur l'axe Y : ");
+            double dy = Convert.ToDouble(Console.ReadLine());
+
+            figure.Deplacement(dx, dy);
+            Console.WriteLine("Figure déplacée avec succès !");
+        }
     }
 }
