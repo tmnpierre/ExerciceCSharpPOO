@@ -8,5 +8,12 @@ namespace Exercice07Figure.Classes
 {
     internal class Point
     {
+        public double PosX { get; set; }
+        public double PosY { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
