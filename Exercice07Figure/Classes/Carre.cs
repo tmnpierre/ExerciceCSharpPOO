@@ -9,5 +9,10 @@ namespace Exercice07Figure.Classes
     internal class Carre : Figure
     {
         public double Cote {  get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

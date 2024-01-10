@@ -10,5 +10,10 @@ namespace Exercice07Figure.Classes
     {
         public double Longueur {  get; set; }
         public double Largeur { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
