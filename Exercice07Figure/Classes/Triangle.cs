@@ -1,23 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercice07Figure.Classes
 {
     internal class Triangle : Figure
     {
-        public double Base {  get; set; }
+        public double Base { get; set; }
         public double Hauteur { get; set; }
 
-        public override void Deplacement(double dx, double dy)
+        public Triangle(double baseLength, double hauteur, double x = 0, double y = 0) : base(x, y)
         {
-            base.Deplacement(dx, dy);
+            Base = baseLength;
+            Hauteur = hauteur;
         }
+
         public override string ToString()
         {
-            return base.ToString();
+            return $"Coordonnées du triangle isocèle (Base = {Base}, Hauteur = {Hauteur}) :\n" +
+                   $"A {Origine}\n" +
+                   $"B {new Point(Origine.PosX + Base, Origine.PosY)}\n" +
+                   $"C {new Point(Origine.PosX + Base / 2, Origine.PosY - Hauteur)}";
         }
     }
 }
