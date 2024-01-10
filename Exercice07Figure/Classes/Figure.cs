@@ -14,7 +14,7 @@ namespace Exercice07Figure.Classes
         public virtual void Deplacement(double dx, double dy)
         {
             Origine.PosX += dx;
-            Origine.PosY += dy;
+            Origine.PosY += dy ;
         }
 
         public override string ToString()
