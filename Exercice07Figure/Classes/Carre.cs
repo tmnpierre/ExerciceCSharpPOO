@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Exercice07Figure.Interfaces;
 
 namespace Exercice07Figure.Classes
 {
@@ -13,6 +14,11 @@ namespace Exercice07Figure.Classes
         public override string ToString()
         {
             return base.ToString();
+        }
+
+        public override void Deplacement(double dx, double dy)
+        {
+            base.Deplacement(dx, dy);
         }
     }
 }
