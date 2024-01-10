@@ -11,14 +11,13 @@ namespace Exercice07Figure.Classes
         public double Base {  get; set; }
         public double Hauteur { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
         public override void Deplacement(double dx, double dy)
         {
             base.Deplacement(dx, dy);
+        }
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

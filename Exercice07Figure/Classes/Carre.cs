@@ -11,14 +11,15 @@ namespace Exercice07Figure.Classes
     {
         public double Cote {  get; set; }
 
+        public override void Deplacement(double dx, double dy)
+        {
+            base.Deplacement(dx, dy);
+        }
+
         public override string ToString()
         {
             return base.ToString();
         }
 
-        public override void Deplacement(double dx, double dy)
-        {
-            base.Deplacement(dx, dy);
-        }
     }
 }
