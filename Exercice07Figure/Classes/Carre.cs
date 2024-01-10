@@ -18,7 +18,12 @@ namespace Exercice07Figure.Classes
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"Coordonnée du Carré ABCD (Coté = 2) :\n" +
+                $"Point A : {origine.PosX};{origine.PosY}\n" +
+                $"Point B : {origine.PosX + 2};{origine.PosY}\n" +
+                $"Point C : {origine.PosX + 2};{origine.PosY - 2}\n" +
+                $"Point D : {origine.PosX};{origine.PosY - 2}\n" +
+                $"___________________";
         }
 
     }
