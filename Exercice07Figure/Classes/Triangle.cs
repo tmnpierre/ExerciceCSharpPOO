@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercice07Figure.Classes
 {
-    internal class Triangle
+    internal class Triangle : Figure
     {
     }
 }
