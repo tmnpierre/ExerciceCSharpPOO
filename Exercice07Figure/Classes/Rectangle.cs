@@ -8,7 +8,7 @@ namespace Exercice07Figure.Classes
 {
     internal class Rectangle : Figure
     {
-        public double longueur {  get; set; }
-        public double largeur { get; set; }
+        public double Longueur {  get; set; }
+        public double Largeur { get; set; }
     }
 }
