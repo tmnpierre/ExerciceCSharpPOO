@@ -8,5 +8,6 @@ namespace Exercice07Figure.Classes
 {
     internal abstract class Figure
     {
+        public Point origine;
     }
 }
